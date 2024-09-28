@@ -6,7 +6,6 @@ import sys,uvicorn
 from backend.src.utils.exception import customException
 from backend.src.utils.logger import logging
 from starlette.responses import JSONResponse
-from backend.src.supabase.config import Supabase
 
 app = FastAPI()
 
