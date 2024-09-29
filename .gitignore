@@ -1,4 +1,5 @@
 glimpse/
+Glimpse.egg-info/
 logs/
 __pycache__
 .env

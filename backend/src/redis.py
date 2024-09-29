@@ -28,7 +28,7 @@ class Redis:
             self.client.rpush(self.cache_key, *[str(product) for product in products])  # Add new products to the Redis list
 
             # Update the offset in Redis
-            self.client.set(self.offset_key, offset + limit)
+            self.client.set(self.offset_key, offset + limit,ex=300)
         
         return products
     
