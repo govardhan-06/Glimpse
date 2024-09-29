@@ -1,7 +1,7 @@
 import random,os,random,uuid
-from backend.src.data.supabase import Supabase
-from backend.src.data.synthetic_data import brands,seller_platforms,sizes
-from backend.src.data.synthetic_data import kurti_descriptions,kurti_names,crop_top_names,crop_top_descriptions
+from src.data.supabase import Supabase
+from src.data.synthetic_data import brands,seller_platforms,sizes
+from src.data.synthetic_data import kurti_descriptions,kurti_names,crop_top_names,crop_top_descriptions
 from dotenv import load_dotenv
 
 load_dotenv()

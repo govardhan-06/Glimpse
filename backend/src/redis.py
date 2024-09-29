@@ -1,14 +1,14 @@
 import redis,sys,os
-from backend.src.utils.exception import customException
-from backend.src.utils.logger import logging
-from backend.src.data.supabase import Supabase
+from src.utils.exception import customException
+from src.utils.logger import logging
+from src.data.supabase import Supabase
 
 class Redis:
     def __init__(self):
         '''
         Initialize the Redis class.
         '''
-        self.host = os.getenv("CLIENT_HOST")
+        self.host = os.getenv("CLIENT_HOST_DEPLOY")
         self.port = int(os.getenv("CLIENT_PORT"))
         self.db = int(os.getenv("CLIENT_DB"))
         self.client = redis.Redis(host=self.host, port=self.port, db=self.db, decode_responses=True)

@@ -3,10 +3,10 @@ from fastapi.responses import JSONResponse
 from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 import sys,uvicorn
-from backend.src.utils.exception import customException
-from backend.src.utils.logger import logging
+from src.utils.exception import customException
+from src.utils.logger import logging
 from starlette.responses import JSONResponse
-from backend.src.redis import Redis
+from src.redis import Redis
 
 app = FastAPI()
 

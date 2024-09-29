@@ -17,7 +17,7 @@ exceptiongroup==1.2.2
 executing==2.1.0
 fastapi==0.115.0
 frozenlist==1.4.1
--e git+https://github.com/govardhan-06/Glimpse.git@4498eb02e105d0b01d066b07e0aa1d20aa7dcfa0#egg=Glimpse&subdirectory=backend
+-e .
 gotrue==2.8.1
 h11==0.14.0
 h2==4.1.0
@@ -46,7 +46,6 @@ pydantic_core==2.23.4
 Pygments==2.18.0
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
-pywin32==306
 pyzmq==26.2.0
 realtime==2.0.5
 redis==5.1.0
