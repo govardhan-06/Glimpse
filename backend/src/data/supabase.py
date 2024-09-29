@@ -36,10 +36,20 @@ class Supabase:
             print(f"Failed to upload {image_name}: {response.text}")
             return None
 
-    # Function to insert data into the Supabase table
     def insert_fashion_item(self,data):
+        '''
+        Inserts a fashion item into the Supabase table.
+        '''
         response = self.client.table("fashion_items").insert(data).execute()
         if response:
             print(f"Inserted {data['name']} successfully!")
         else:
             print(f"Failed to insert {data['name']}: {response.text}")
+    
+    def fetch_products(self,limit: int, offset: int):
+        '''
+        Fetches products from the Supabase table.
+        '''
+        response = self.client.table("fashion_items").select("*").range(offset, offset + limit - 1).execute()
+        products = response.data
+        return products
