@@ -1,0 +1,8 @@
+Glimpse.egg-info/
+glimpse/
+README.md
+LICENSE
+.gitignore
+logs/
+.github
+__pycache__
