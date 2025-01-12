@@ -16,7 +16,7 @@ def get_requirements(file_path:str) -> List[str]:
 
 setup(
     name='Glimpse',
-    version='1.0.0',
+    version='0.0.1',
     author='Govardhan',
     author_email='govardhanar06@gmail.com',
     packages=find_packages(),
