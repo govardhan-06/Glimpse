@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-image_folder = os.getenv("IMAGE_PATH_FOLDER")
+image_folder = os.getenv("CROP_TOP_PATH_FOLDER")
 
 def generate_random_fashion_data(image_url):
     return {

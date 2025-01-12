@@ -13,6 +13,7 @@ class Supabase:
         self.url = os.getenv("SUPABASE_URL")
         self.key = os.getenv("SUPABASE_KEY")
         self.client= create_client(self.url, self.key)
+        self.bucket_name=os.getenv("BUCKET_NAME")
 
     def upload_image(self,image_path,image_name):
         '''
@@ -25,13 +26,14 @@ class Supabase:
             image_data = f.read()
         
         # Upload to Supabase bucket
-        response = self.client.storage.from_('fashion_products_images').upload(f"fashion_products_images/{image_name}", image_data, {
+        response = self.client.storage.from_(self.bucket_name).upload(f"{self.bucket_name}/{image_name}", image_data, {
             "content-type": mime_type
         })
         
         if response.status_code == 200:
             # Return the public URL of the uploaded image
-            return f"{self.url}/storage/v1/object/public/your_bucket_name/fashion_images/{image_name}"
+            return f"{self.url}/storage/v1/object/public/{self.bucket_name}/{self.bucket_name}/{image_name}"
+
         else:
             print(f"Failed to upload {image_name}: {response.text}")
             return None
